@@ -78,24 +78,24 @@ export function Hero() {
       <div ref={mountRef} className="absolute inset-0 z-0 opacity-40 pointer-events-none" />
       
       {/* Animated gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-electric/20 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] mix-blend-screen animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-electric/20 rounded-full blur-[120px] mix-blend-multiply animate-pulse-slow" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] mix-blend-multiply animate-pulse-slow" style={{ animationDelay: '2s' }} />
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-block py-1 px-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8"
+          className="inline-block py-1 px-4 rounded-full border border-slate-200 bg-white/50 backdrop-blur-md mb-8"
         >
-          <span className="text-sm font-medium text-cyan-electric tracking-wide uppercase">Agencia Digital Premium</span>
+          <span className="text-sm font-semibold text-cyan-electric tracking-wide uppercase">Diseño & Estrategia Digital</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-6 max-w-5xl leading-[1.1]"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-slate-900 mb-6 max-w-5xl leading-[1.1]"
         >
           Ideas Inteligentes. <br />
           <span className="text-gradient">Marcas Poderosas.</span>
@@ -105,7 +105,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-2xl text-slate-400 max-w-3xl mb-12 font-light"
+          className="text-lg md:text-2xl text-slate-600 max-w-3xl mb-12 font-medium"
         >
           Transformamos ideas en marcas digitales que dominan su industria.
           Diseño web de clase mundial para empresas visionarias.
@@ -117,10 +117,10 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row gap-6 items-center"
         >
-          <button className="btn-premium w-full sm:w-auto text-lg py-4 px-10">
+          <button className="btn-premium w-full sm:w-auto text-lg py-4 px-10 bg-slate-900 text-white">
             Iniciar Proyecto
           </button>
-          <button className="btn-outline w-full sm:w-auto text-lg py-4 px-10">
+          <button className="btn-outline w-full sm:w-auto text-lg py-4 px-10 border-slate-300 text-slate-900 hover:bg-slate-100">
             Ver Nuestro Trabajo
           </button>
         </motion.div>

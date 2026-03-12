@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-midnight: #020617;
-  --color-midnight-light: #0f172a;
-  --color-cyan-electric: #00f2ff;
-  --color-glass: rgba(255, 255, 255, 0.03);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
+  /* Switched the default base to light */
+  --color-midnight: #ffffff;
+  --color-midnight-light: #f8fafc;
+  /* Switched white text parts to dark text parts for contrast */
+  --color-white: #020617; 
+  /* Accents */
+  --color-cyan-electric: #0076ff; /* A darker cyan/blue for crisp legibility */
+  --color-glass: rgba(0, 0, 0, 0.03);
+  --color-glass-border: rgba(0, 0, 0, 0.1);
   
   --font-sans: "Inter", "Geist", "Inter var", sans-serif;
   
@@ -58,11 +62,11 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/60;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500;
   }
   
   .text-gradient-accent {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-electric to-blue-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-electric to-blue-700;
   }
   
   .btn-premium {
