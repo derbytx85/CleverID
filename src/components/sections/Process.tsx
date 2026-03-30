@@ -27,7 +27,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="proceso" className="py-32 bg-midnight-light text-white relative overflow-hidden">
+    <section id="proceso" className="py-32 bg-slate-50 text-slate-900 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -37,9 +37,9 @@ export function Process() {
           className="text-center mb-24 max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
-            Ingeniería de <span className="text-cyan-electric">Marcas</span>.
+            Ingeniería de <span className="text-blue-600">Marcas</span>.
           </h2>
-          <p className="text-xl text-slate-400 font-light">
+          <p className="text-xl text-slate-600 font-medium">
             Un proceso estructurado para resultados predecibles y escalables.
           </p>
         </motion.div>
@@ -52,15 +52,15 @@ export function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="relative overflow-hidden group p-8 rounded-3xl bg-midnight/50 border border-white/5 hover:border-cyan-electric/50 transition-colors duration-500"
+              className="relative overflow-hidden group p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-400/50 transition-colors duration-500 shadow-sm"
             >
-              <div className="text-7xl font-black text-white/5 mb-6 group-hover:text-cyan-electric/10 transition-colors duration-500">
+              <div className="text-7xl font-black text-slate-200 mb-6 group-hover:text-blue-100 transition-colors duration-500">
                 {step.number}
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-cyan-electric transition-colors">
+              <h3 className="text-2xl font-semibold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors">
                 {step.title}
               </h3>
-              <p className="text-slate-400 font-light leading-relaxed">
+              <p className="text-slate-600 font-medium leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

@@ -36,17 +36,20 @@ export function Contact() {
             <div>
               <h3 className="text-2xl font-semibold mb-6">Contáctanos</h3>
               <ul className="space-y-6">
-                <li className="flex items-center gap-4 text-slate-300 hover:text-cyan-electric transition-colors">
-                  <span className="w-12 h-12 rounded-full glass flex items-center justify-center shrink-0">
+                <li className="flex items-start gap-4 text-slate-700 hover:text-cyan-electric transition-colors">
+                  <span className="w-12 h-12 rounded-full glass flex items-center justify-center shrink-0 mt-1">
                     <Mail size={20} />
                   </span>
-                  <a href="mailto:hello@cleverid.com" className="text-lg">hello@cleverid.com</a>
+                  <div className="flex flex-col gap-1">
+                    <a href="mailto:jose.fernandez@cleverid.cl" className="text-lg">jose.fernandez@cleverid.cl</a>
+                    <a href="mailto:marcos.fereira@cleverid.cl" className="text-lg">marcos.fereira@cleverid.cl</a>
+                  </div>
                 </li>
-                <li className="flex items-center gap-4 text-slate-300">
+                <li className="flex items-center gap-4 text-slate-700">
                   <span className="w-12 h-12 rounded-full glass flex items-center justify-center shrink-0">
                     <MapPin size={20} />
                   </span>
-                  <span className="text-lg">San Francisco, CA<br /><span className="text-sm text-slate-500">Operación Global</span></span>
+                  <span className="text-lg">Santiago, CL<br /><span className="text-sm text-slate-500 font-semibold">Operación Global</span></span>
                 </li>
               </ul>
             </div>

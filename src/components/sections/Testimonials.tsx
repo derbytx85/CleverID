@@ -36,7 +36,7 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section className="py-32 bg-midnight-light text-white overflow-hidden relative">
+    <section className="py-32 bg-slate-50 text-slate-900 overflow-hidden relative">
       <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -45,9 +45,9 @@ export function Testimonials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <Quote className="w-16 h-16 text-cyan-electric/50 mx-auto mb-6 opacity-30" />
+          <Quote className="w-16 h-16 text-blue-600/20 mx-auto mb-6" />
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-            Testimonios del <span className="text-cyan-electric">éxito</span>.
+            Testimonios del <span className="text-blue-600">éxito</span>.
           </h2>
         </motion.div>
 
@@ -64,7 +64,7 @@ export function Testimonials() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="absolute inset-0 flex flex-col items-center text-center justify-center p-8"
             >
-              <p className="text-2xl md:text-4xl text-slate-300 font-light italic leading-relaxed mb-12 max-w-3xl">
+              <p className="text-2xl md:text-4xl text-slate-900 font-bold italic leading-relaxed mb-12 max-w-3xl">
                 "{testimonial.quote}"
               </p>
               
@@ -72,11 +72,11 @@ export function Testimonials() {
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.author}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-cyan-electric p-0.5"
+                  className="w-16 h-16 rounded-full object-cover border-2 border-blue-600 p-0.5"
                 />
-                <div className="text-left shadow-2xl">
-                  <h4 className="text-xl font-semibold text-white">{testimonial.author}</h4>
-                  <p className="text-sm text-cyan-electric">{testimonial.role}</p>
+                <div className="text-left">
+                  <h4 className="text-2xl font-black text-slate-950">{testimonial.author}</h4>
+                  <p className="text-sm text-blue-700 font-black uppercase tracking-widest">{testimonial.role}</p>
                 </div>
               </div>
             </motion.div>
@@ -90,7 +90,7 @@ export function Testimonials() {
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               className={`w-12 h-1 rounded-full transition-all duration-300 ${
-                idx === currentIndex ? "bg-cyan-electric" : "bg-white/20 hover:bg-white/40"
+                idx === currentIndex ? "bg-blue-600" : "bg-slate-200 hover:bg-slate-300"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />

@@ -1,7 +1,5 @@
-"use client";
-
 import { useRef, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import * as THREE from "three";
 
 export function Hero() {
@@ -29,7 +27,7 @@ export function Hero() {
     }
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
 
-    const material = new THREE.PointsMaterial({ color: 0x00f2ff, size: 2, transparent: true, opacity: 0.5 });
+    const material = new THREE.PointsMaterial({ color: 0x2563eb, size: 2, transparent: true, opacity: 0.2 });
     const points = new THREE.Points(geometry, material);
     scene.add(points);
 
@@ -74,38 +72,38 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div ref={mountRef} className="absolute inset-0 z-0 opacity-40 pointer-events-none" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white">
+      <div ref={mountRef} className="absolute inset-0 z-0 opacity-10 pointer-events-none" />
       
       {/* Animated gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-electric/20 rounded-full blur-[120px] mix-blend-multiply animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] mix-blend-multiply animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-100/50 rounded-full blur-[150px] mix-blend-multiply animate-pulse-slow" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-cyan-100/50 rounded-full blur-[120px] mix-blend-multiply animate-pulse-slow" style={{ animationDelay: '2s' }} />
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-block py-1 px-4 rounded-full border border-slate-200 bg-white/50 backdrop-blur-md mb-8"
+          className="inline-block py-2 px-6 rounded-full border border-blue-200 bg-blue-50 mb-8"
         >
-          <span className="text-sm font-semibold text-cyan-electric tracking-wide uppercase">Diseño & Estrategia Digital</span>
+          <span className="text-sm font-extrabold text-blue-800 tracking-wider uppercase">Diseño & Estrategia Digital</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-slate-900 mb-6 max-w-5xl leading-[1.1]"
+          className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-slate-950 mb-8 max-w-5xl leading-[0.95]"
         >
           Ideas Inteligentes. <br />
-          <span className="text-gradient">Marcas Poderosas.</span>
+          <span className="text-blue-600">Marcas Poderosas.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-2xl text-slate-600 max-w-3xl mb-12 font-medium"
+          className="text-lg md:text-2xl text-slate-800 max-w-3xl mb-12 font-bold leading-relaxed"
         >
           Transformamos ideas en marcas digitales que dominan su industria.
           Diseño web de clase mundial para empresas visionarias.
@@ -117,10 +115,10 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row gap-6 items-center"
         >
-          <button className="btn-premium w-full sm:w-auto text-lg py-4 px-10 bg-slate-900 text-white">
+          <button className="btn-premium w-full sm:w-auto text-lg">
             Iniciar Proyecto
           </button>
-          <button className="btn-outline w-full sm:w-auto text-lg py-4 px-10 border-slate-300 text-slate-900 hover:bg-slate-100">
+          <button className="btn-outline w-full sm:w-auto text-lg">
             Ver Nuestro Trabajo
           </button>
         </motion.div>
@@ -132,8 +130,8 @@ export function Hero() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-float"
       >
-        <span className="text-xs uppercase tracking-widest text-slate-500 font-medium">Scroll para descubrir</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-cyan-electric/50 to-transparent" />
+        <span className="text-xs uppercase tracking-widest text-slate-950 font-black">Scroll para descubrir</span>
+        <div className="w-[2px] h-12 bg-blue-600" />
       </motion.div>
     </section>
   );

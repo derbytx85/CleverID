@@ -4,12 +4,10 @@ import { motion } from "framer-motion";
 
 export function CTA() {
   return (
-    <section className="py-24 relative overflow-hidden bg-midnight">
+    <section className="py-24 relative overflow-hidden bg-slate-50">
       {/* Animated gradient background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-electric/10 via-blue-600/10 to-midnight opacity-80" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-electric/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-electric/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-50 opacity-80" />
       </div>
 
       <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
@@ -18,10 +16,10 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-6 leading-[1.05]"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-slate-900 mb-6 leading-[1.05]"
         >
           Tu marca merece<br />
-          <span className="text-cyan-electric">ser legendaria.</span>
+          <span className="text-blue-600">ser legendaria.</span>
         </motion.h2>
 
         <motion.p
@@ -29,7 +27,7 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-          className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-light"
+          className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-12 font-medium"
         >
           Únete a las empresas que ya dominan su mercado con una identidad
           visual de clase mundial. El siguiente paso es tuyo.
@@ -55,7 +53,7 @@ export function CTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-8 text-sm text-slate-600 font-medium"
+          className="mt-8 text-sm text-slate-500 font-bold"
         >
           Sin contratos largos · Primera consulta gratuita · Resultados garantizados
         </motion.p>

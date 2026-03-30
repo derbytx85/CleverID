@@ -61,7 +61,7 @@ const item = {
 
 export function Services() {
   return (
-    <section id="servicios" className="py-32 relative bg-midnight text-white">
+    <section id="servicios" className="py-32 relative bg-white text-slate-900">
       <div className="container mx-auto px-6 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -70,10 +70,10 @@ export function Services() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl mb-24"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            Servicios diseñados para el <span className="text-cyan-electric">futuro</span>.
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-slate-900">
+            Servicios diseñados para el <span className="text-blue-600">futuro</span>.
           </h2>
-          <p className="text-xl text-slate-400 font-light leading-relaxed">
+          <p className="text-xl text-slate-600 font-medium leading-relaxed">
             Combinamos estrategia, creatividad y tecnología para resolver
             problemas complejos y construir marcas que trascienden.
           </p>
@@ -90,17 +90,17 @@ export function Services() {
             <motion.div
               key={index}
               variants={item}
-              className="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-500 group relative overflow-hidden"
+              className="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-500 group relative overflow-hidden bg-white hover:bg-slate-50 border-slate-200"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-electric/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <service.icon className="w-10 h-10 text-cyan-electric mb-6" strokeWidth={1.5} />
-              <h3 className="text-2xl font-semibold mb-3 tracking-tight">{service.title}</h3>
-              <p className="text-slate-400 font-light leading-relaxed">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <service.icon className="w-10 h-10 text-blue-600 mb-6" strokeWidth={1.5} />
+              <h3 className="text-2xl font-semibold mb-3 tracking-tight text-slate-900">{service.title}</h3>
+              <p className="text-slate-600 font-medium leading-relaxed">
                 {service.description}
               </p>
               
               {/* Animated underline */}
-              <div className="h-[2px] w-0 bg-cyan-electric mt-8 group-hover:w-full transition-all duration-500 ease-out" />
+              <div className="h-[2px] w-0 bg-blue-600 mt-8 group-hover:w-full transition-all duration-500 ease-out" />
             </motion.div>
           ))}
         </motion.div>
